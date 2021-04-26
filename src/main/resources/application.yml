@@ -1,0 +1,26 @@
+#(config for integration tests)
+#spring:
+# h2:
+#  console:
+#   enabled: true
+
+#  spring:
+#   datasource:
+#    url=jdbc:h2:mem:testdb:
+
+#spring security and auth details(facebook)
+spring:
+security:
+  oauth2:
+    client:
+      registration:
+        facebook:
+          clientId: 289696349307392
+          clientSecret: fc7d6def2171200e25629c6b0ac30278
+          accessTokenUri: https://graph.facebook.com/oauth/access_token
+          userAuthorizationUri: https://www.facebook.com/dialog/oauth
+          tokenName: oauth_token
+          authenticationScheme: query
+          clientAuthenticationScheme: form
+          resource:
+            userInfoUri: https://graph.facebook.com/me
